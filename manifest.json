@@ -1,31 +1,28 @@
 {
-  "manifest_version": 2,
-  "name": "Firefox-Template",
+  "manifest_version": 3,
+  "name": "Delete-Amazon-Recommend",
   "version": "0.0.1",
-
   "description": "",
   "homepage_url": "https://github.com/OkanoShinri/Firefox-Template",
-  "icons": {
-    "48": "icons/48.png",
-    "96": "icons/96.png"
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "delete-amazon-recommend@example.com"
+    }
   },
-
-  "permissions": ["<all_urls>", "storage"],
+  "icons": {
+    "128": "icons/128.png"
+  },
+  "permissions": [
+    "activetab"
+  ],
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": []
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/content_scripts/content.js"
+      ]
     }
-  ],
-  "browser_action": {
-    "default_icon": "icons/32.png",
-    "default_title": "Firefox-Template",
-    "default_popup": "src/popup/popup.html"
-  },
-  "options_ui": {
-    "page": "src/option/options.html"
-  },
-  "background": {
-    "scripts": ["src/background-scripts/background.js"]
-  }
+  ]
 }

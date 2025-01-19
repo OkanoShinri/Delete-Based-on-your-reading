@@ -1,2 +1,1 @@
-# Firefox-Template
-Firefox 拡張機能のテンプレート
+Amazonの「読書履歴に基づくおすすめ」を表示しないようにするだけの拡張機能
